@@ -1,4 +1,5 @@
 class ParagraphsController < ApplicationController
+  before_filter :requirelogado
   # GET /paragraphs
   # GET /paragraphs.json
   def index

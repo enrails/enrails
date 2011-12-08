@@ -1,20 +1,20 @@
 <% @sections.each do |section|%>
-	<li><%=link_to section.send(:titulo.to_s+local) , enrails_section_path(:id=>section), :id => "enlace"%></li>
+	<li><%=link_to section.tituloes , enrails_section_path(:id=>section), :id => "enlace"%></li>
 <%end%>
 
  
 <%if @projects.nil? %>
-	<li><%=link_to t('projects'), enrails_projects_path%></li>
+	<li><%=link_to 'Proyectos', enrails_projects_path%></li>
 <%else%>
  	<li class="dropdown" data-dropdown="dropdown" >
-    	<%=link_to t('projects'),enrails_projects_path,:class=>"dropdown-toggle"%>
+    	<%=link_to 'Proyectos',enrails_projects_path,:class=>"dropdown-toggle"%>
     	<ul class="dropdown-menu">
     		 <% @projects.each do |project|%>
-    			 <li><%= link_to project.send(:titulo.to_s+local),enrails_project_path(:id=>project)%></li>
+    			 <li><%= link_to project.tituloes,enrails_project_path(:id=>project)%></li>
     		 <%end%>
     	</ul>
   	</li>
 <%end%>
 
-<li><%=link_to t('contact'),enrails_contact_path,:id=>"contactLink"%></li>
+<li><%=link_to t('Contactar'),enrails_contact_path,:id=>"contactLink"%></li>
 <li><%=link_to t('Blog'),'http://enrails.blogspot.com'%></li>

@@ -13,9 +13,9 @@
     <td><%= photo.tituloes %></td>
     <td><%= photo.tituloen %></td>
     <td><%=link_to image_tag(photo.image_url(:thumb).to_s,:size=>'32x32',:alt=>photo.tituloes), photo.image_url.to_s,:rel=>'prettyPhoto',:title=>photo.tituloes%></td>
-    <td><%= link_to 'Show', photo %></td>
-    <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-    <td><%= link_to 'Destroy', photo, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Ver', photo %></td>
+    <td><%= link_to 'Editar', edit_photo_path(photo) %></td>
+    <td><%= link_to 'Eliminar', photo, confirm: 'Estas seguro?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

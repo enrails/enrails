@@ -1,4 +1,5 @@
 class SectionsController < ApplicationController
+  before_filter :requirelogado
   # GET /sections
   # GET /sections.json
   def index

@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
  
+  def requirelogado
+	 	if session[:logado]!=true
+	  		redirect_to root_path
+	  	end
+	 end
+ 
   def set_locale
 		# I18n.locale = extract_locale_from_accept_language_header
 		if params[:local]

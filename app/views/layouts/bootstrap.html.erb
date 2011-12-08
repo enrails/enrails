@@ -13,6 +13,7 @@
 $(document).ready(function(){
   $("a[rel='prettyPhoto[pp_gal]']").prettyPhoto();
    $("a[rel='prettyPhoto']").prettyPhoto();
+   $(".alert-message").alert()
 });
 </script>
    
@@ -117,11 +118,14 @@ $(document).ready(function(){
             <%= yield%>
           </div>
           <div class="span4">
-            <h3>Idioma: <%=link_to alternaidioma,root_path(:local=>alternaidioma)%></h3>
+            <!--<h3>Idioma: <%=link_to alternaidioma,root_path(:local=>alternaidioma)%></h3>-->
     		
             <%=link_to image_tag('enrailsblack.jpg',:size=>'128x128',:alt=>'enRails'), '/assets/enrailsblack.jpg',:rel=>'prettyPhoto',:title=>'enRails'%>
+             <%if logado%> 
               <h3>Gestión</h3>
               <%=render 'enrails/options'%>
+          	  <%=link_to 'Desconectar',logout_path%>
+          	<%end%>
           </div>
         </div>
       </div>
