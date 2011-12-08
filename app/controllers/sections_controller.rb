@@ -7,7 +7,7 @@ class SectionsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @sections }
+      format.json { render :json=> @sections }
     end
   end
 
@@ -23,7 +23,7 @@ class SectionsController < ApplicationController
 	@gallery=@section.gallery
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @section }
+      format.json { render :json=> @section }
     end
   end
 
@@ -34,7 +34,7 @@ class SectionsController < ApplicationController
     @sections = Section.all
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @section }
+      format.json { render :json=> @section }
     end
   end
 
@@ -51,11 +51,11 @@ class SectionsController < ApplicationController
 
     respond_to do |format|
       if @section.save
-        format.html { redirect_to @section, notice: 'Section was successfully created.' }
-        format.json { render json: @section, status: :created, location: @section }
+        format.html { redirect_to @section, :notice=> 'Section was successfully created.' }
+        format.json { render :json=> @section, :status=> :created, :location=> @section }
       else
-        format.html { render action: "new" }
-        format.json { render json: @section.errors, status: :unprocessable_entity }
+        format.html { render :action=> "new" }
+        format.json { render :json=> @section.errors, :status=> :unprocessable_entity }
       end
     end
   end
@@ -67,11 +67,11 @@ class SectionsController < ApplicationController
 
     respond_to do |format|
       if @section.update_attributes(params[:section])
-        format.html { redirect_to @section, notice: 'Section was successfully updated.' }
+        format.html { redirect_to @section, :notice=> 'Section was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @section.errors, status: :unprocessable_entity }
+        format.html { render :action=> "edit" }
+        format.json { render :json=> @section.errors, :status=> :unprocessable_entity }
       end
     end
   end

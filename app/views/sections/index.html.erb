@@ -17,7 +17,7 @@
     <th></th>
     <td><%= link_to 'Ver', section %></td>
     <td><%= link_to 'Editar', edit_section_path(section) %></td>
-    <td><%= link_to 'Borrar', section, confirm: 'Estas seguro?', method: :delete %></td>
+    <td><%= link_to 'Borrar', section, :confirm=> 'Estas seguro?', :method=> :delete %></td>
   </tr>
 <% end %>
 </table>

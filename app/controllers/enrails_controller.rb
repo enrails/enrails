@@ -32,7 +32,7 @@ class EnrailsController < ApplicationController
   	 @sections=Section.all
    	 if params[:name]
    	 	ContactoMailer.contactar(params[:email],params[:name],params[:text]).deliver
-   		redirect_to enrails_contact_path, notice: 'Recibido' 
+   		redirect_to enrails_contact_path, :notice=> 'Recibido' 
    	 end
   end
 end

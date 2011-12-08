@@ -7,7 +7,7 @@ class PhotosController < ApplicationController
 	@sections=Section.all
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @photos }
+      format.json { render :json=> @photos }
     end
   end
 
@@ -18,7 +18,7 @@ class PhotosController < ApplicationController
 	@sections=Section.all
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @photo }
+      format.json { render :json=> @photo }
     end
   end
 
@@ -35,7 +35,7 @@ class PhotosController < ApplicationController
 	@sections=Section.all
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @photo }
+      format.json { render :json=> @photo }
     end
   end
 
@@ -52,11 +52,11 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
-        format.json { render json: @photo, status: :created, location: @photo }
+        format.html { redirect_to @photo, :notice=> 'Photo was successfully created.' }
+        format.json { render :json=> @photo, :status=> :created, :location=> @photo }
       else
-        format.html { render action: "new" }
-        format.json { render json: @photo.errors, status: :unprocessable_entity }
+        format.html { render :action=> "new" }
+        format.json { render :json=> @photo.errors, :status=> :unprocessable_entity }
       end
     end
   end
@@ -68,11 +68,11 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.update_attributes(params[:photo])
-        format.html { redirect_to @photo, notice: 'Photo was successfully updated.' }
+        format.html { redirect_to @photo, :notice=> 'Photo was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @photo.errors, status: :unprocessable_entity }
+        format.html { render :action=> "edit" }
+        format.json { render :json=> @photo.errors, :status=> :unprocessable_entity }
       end
     end
   end

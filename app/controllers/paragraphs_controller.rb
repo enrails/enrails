@@ -7,7 +7,7 @@ class ParagraphsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @paragraphs }
+      format.json { render :json=> @paragraphs }
     end
   end
 
@@ -19,7 +19,7 @@ class ParagraphsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @paragraph }
+      format.json { render :json=> @paragraph }
     end
   end
 
@@ -36,7 +36,7 @@ class ParagraphsController < ApplicationController
 	end
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @paragraph }
+      format.json { render :json=> @paragraph }
     end
   end
 
@@ -53,11 +53,11 @@ class ParagraphsController < ApplicationController
 
     respond_to do |format|
       if @paragraph.save
-        format.html { redirect_to @paragraph, notice: 'Paragraph was successfully created.' }
-        format.json { render json: @paragraph, status: :created, location: @paragraph }
+        format.html { redirect_to @paragraph, :notice=> 'Paragraph was successfully created.' }
+        format.json { render :json=> @paragraph, :status=> :created, :location=> @paragraph }
       else
-        format.html { render action: "new" }
-        format.json { render json: @paragraph.errors, status: :unprocessable_entity }
+        format.html { render :action=> "new" }
+        format.json { render :json=> @paragraph.errors, :status=> :unprocessable_entity }
       end
     end
   end
@@ -69,11 +69,11 @@ class ParagraphsController < ApplicationController
 
     respond_to do |format|
       if @paragraph.update_attributes(params[:paragraph])
-        format.html { redirect_to @paragraph, notice: 'Paragraph was successfully updated.' }
+        format.html { redirect_to @paragraph, :notice=> 'Paragraph was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @paragraph.errors, status: :unprocessable_entity }
+        format.html { render :action=> "edit" }
+        format.json { render :json=> @paragraph.errors, :status=> :unprocessable_entity }
       end
     end
   end

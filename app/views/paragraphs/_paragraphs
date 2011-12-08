@@ -18,7 +18,7 @@
       <td>Sí</td> <%else%><td>No</td> <%end%>
     <td><%= link_to 'Ver', paragraph %></td>
     <td><%= link_to 'Editar', edit_paragraph_path(paragraph) %></td>
-    <td><%= link_to 'Borrar', paragraph, confirm: 'Estas seguro?', method: :delete %></td>
+    <td><%= link_to 'Borrar', paragraph, :confirm=> 'Estas seguro?', :method=> :delete %></td>
   </tr>
 <% end %>
 </table>
