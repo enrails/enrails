@@ -1,0 +1,14 @@
+<%if !@section.nil?%>
+<h1>Galeria de sección: <%=@gallery.section.tituloes%></h1>
+<%else%>
+<h1>Galeria de proyecto: <%=@gallery.project.tituloes%></h1>
+<%end%>
+<%=render 'photos'%>
+<%= link_to 'Añadir imagen a la galeria',new_photo_path(:id=>@gallery)%> |
+
+
+<%if !@section.nil?%>
+<%= link_to 'Volver a seccion',section_path(:id=>@gallery.section)%>
+<%else%>
+<%= link_to 'Volver a proyecto',project_path(:id=>@gallery.project)%>
+<%end%>

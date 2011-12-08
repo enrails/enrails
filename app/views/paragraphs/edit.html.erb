@@ -1,0 +1,10 @@
+<h1>Edición de párrafo</h1>
+<br/>
+<%= render 'form' %>
+<br/>
+<%= link_to 'Ver', @paragraph %> |
+<%if !@paragraph.section.nil?%>
+<%= link_to 'Volver', section_path(@paragraph.section) %>
+<%else%>
+<%= link_to 'Volver', project_path(@paragraph.project) %>
+<%end%>

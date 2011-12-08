@@ -1,0 +1,31 @@
+<h1>Viendo párrafo</h1>
+<p id="notice"><%= notice %></p>
+<div style='float:right; margin-right:3em;'>
+ <%if !@paragraph.photo.nil?%>
+   <%=link_to image_tag(@paragraph.photo.image_url(:thumb).to_s,:size=>'128x128',:alt=>@paragraph.photo.tituloes), @paragraph.photo.image_url.to_s,:rel=>'prettyPhoto',:title=>@paragraph.photo.tituloes%>
+  <%end%>
+</div>
+<h2>Título: <%=@paragraph.tituloes %> / <%=@paragraph.tituloen %> </h2>
+
+<p>
+<%= simple_format(@paragraph.textoes) %>
+</p>
+<p>
+<%= simple_format(@paragraph.textoen) %>
+</p>
+
+ 
+ <br/>
+ <%if !@paragraph.photo.nil?%>
+ <%=link_to 'Editar imagen',edit_photo_path(:id=>@paragraph.photo)%>
+ <%else%> 
+<%=link_to 'Añadir imagen',new_photo_path(:id=>@paragraph,:tipo=>'paragraph')%>
+<%end%>
+ <br/> <br/>
+
+<%= link_to 'Editar', edit_paragraph_path(@paragraph) %> |
+<%if !@paragraph.section.nil?%>
+<%= link_to 'Volver', section_path(@paragraph.section) %>
+<%else%>
+<%= link_to 'Volver', project_path(@paragraph.project) %>
+<%end%>

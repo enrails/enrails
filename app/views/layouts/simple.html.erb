@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="realitysoftware.ca" />
+<title></title>
+<%= stylesheet_link_tag('simple') %>
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="header">
+<a href="#">enRails zona de administración</a>
+</div>
+
+<div id="menu">
+<a href="#">HOME</a> &nbsp; &nbsp; &nbsp; &nbsp; <%=link_to 'SECCIONES',sections_path%> &nbsp; &nbsp; &nbsp; &nbsp;
+</div>
+
+<div id="sidebar">
+
+<h1>Bienvenido</h1>
+<% if @section%>
+<h1>> <%=@section.tituloes%></h1>
+<%end%>
+</div>
+
+<div id="main">
+<%=yield%>
+</div>
+
+<div id="footer">
+&copy;2011 enRails &nbsp;<span class="separator">|</span>&nbsp; 
+</div>
+
+</div>
+
+</body>
+</html>

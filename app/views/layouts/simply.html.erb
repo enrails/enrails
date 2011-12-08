@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>enRails gestion</title>
+<meta http-equiv="Content-Language" content="English" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<%= stylesheet_link_tag('simply') %>
+</head>
+<body>
+
+<div id="wrap">
+
+<div id="header">
+<h1>enRails</h1>
+<h2>Zona de adminsitración del sitio</h2>
+</div>
+
+<div id="breadcrumbs">
+Utiliza el menú lateral para acceder a las distintas páginas
+</div>
+
+<div id="left">
+
+	<h2>Opciones</h2>
+		<div class="box">
+			<ul>
+				<li><%= link_to 'Secciones',sections_path%></li>
+
+			</ul>
+		</div>
+
+	
+
+</div>
+
+<div id="content">
+<%=yield%>
+</div>
+
+<div id="footer">
+
+	<!--<div style="float: right;">
+		<a href="#" title="Contact Us"><img src="contact.gif" alt="Contact" /></a>
+		<a href="#" title="Sitemap"><img src="sitemap.gif" alt="Sitemap" /></a>
+		<a href="#" title="Rss Feed"><img src="rss.gif" alt="Rss Feed" /></a>
+	</div>-->
+
+Copyright &copy; enRails
+</div>
+
+</div>
+</body>
+</html>

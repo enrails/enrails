@@ -1,0 +1,13 @@
+<h1><%=t('contact')%></h1>
+<div style="float:right; margin-right=5px; ">
+
+</div>
+
+<p>Want to contact us? Fill the form and we will be in touch</p>
+ <%if notice%>
+<p id="notice" style="color: green"><%= notice %></p>
+<%else%>
+<p>&nbsp;</p>
+<%end%>
+
+<%=render 'form'%>

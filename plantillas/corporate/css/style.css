@@ -1,0 +1,40 @@
+html 	{width:100%; }
+body 	{background:#5B6266 url('../images/header-bg.jpg') repeat-x 0 0; margin:0 0 30px 0; padding:0px; width:100%; font-family:"Trebuchet MS", Verdana; line-height:150%; font-size:90%; color:#000000; }
+p		{padding:0 0 15px 0; margin:0; }
+
+a		{text-decoration:underline; color:#9D0D10; }
+a:hover	{text-decoration:none; }
+
+h2		{padding:0 0 5px 0; margin:0; font-size:140%; font-weight:normal; }
+
+#all 		{text-align:center; width:100%; }
+#container 	{margin:0 auto; text-align:left; width:720px; }
+#header		{padding:35px 0; }
+.block		{padding:20px; border:5px solid #FFFFFF; background:#7F8488; color:#FFFFFF; margin:30px 0 0 0; }
+#content	{padding:20px 20px 5px 20px; border:5px solid #F2F2F2; background:#FFFFFF; margin:30px 0 0 0; }
+
+#header h1	{font-weight:normal; margin:0; padding:0; font-size:180%; color:#FFFFFF; text-align:right; }
+#header ul	{float:left; margin:0; padding:9px 0; }
+#header li	{margin:0; padding:0; list-style:none; display:inline; }
+#header ul a		{color:#000000; background:#DADADA url('../images/link-bg.jpg') repeat-x 0 0; padding:8px 20px 5px 20px; text-decoration:none; border:1px solid #FFFFFF; }
+#header ul a:hover	{background:#C5C5C5 url('../images/link-bg-hover.jpg') repeat-x 0 0; }
+
+.block h3	{margin:0; padding:0; font-weight:normal; font-size:140%; line-height:160%; }
+.block p	{font-size:90%; padding:0; text-align:center; }
+.block a	{color:#FFFFFF; }
+
+#home #homeLink,
+#profile #profileLink,
+#portfolio #portfolioLink,
+#testimonials #testimonialsLink,
+#contact #contactLink
+{color:#000000; background:#FFFFFF url('../images/link-on-bg.jpg') repeat-x  0 0;; padding:8px 20px 5px 20px; text-decoration:none; }
+
+
+
+.clearfix:after 	{content:"."; display:block; height:0; clear:both; visibility:hidden; }
+.clearfix 			{display:inline-block; }
+/* Hides from IE-mac \*/
+* html .clearfix 	{height:1%; }
+.clearfix 			{display:block; }
+/* End hide from IE-mac */

@@ -1,0 +1,44 @@
+<%= form_for(@paragraph) do |f| %>
+  <% if @paragraph.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@paragraph.errors.count, "error") %> prohibited this paragraph from being saved:</h2>
+
+      <ul>
+      <% @paragraph.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+   <fieldset>
+   <div class="clearfix">
+    <%= f.label :tituloes %>
+     <div class='input'>
+    <%= f.text_field :tituloes,:class=>"xlarge" %>
+    </div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :textoes %>
+      <div class='input'>
+    		<%= f.text_area :textoes,:class=>"xlarge",:size=>'30x5'%>
+  	  </div>
+  </div>
+    <div class="clearfix">
+    <%= f.label :tituloen %>
+     <div class='input'>
+    	<%= f.text_field :tituloen,:class=>"xlarge" %>
+  	</div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :textoen %>
+    <div class='input'>
+    	<%= f.text_area :textoen,:class=>"xlarge",:size=>'30x5' %>
+  	</div>
+  </div>
+ </fieldset>
+  <%=f.hidden_field :section_id%>
+    <%=f.hidden_field :project_id%>
+  <div class="actions">
+    <%= f.submit('Guardar',:class=>'btn primary') %>
+  </div>
+<% end %>

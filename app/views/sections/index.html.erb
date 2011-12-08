@@ -1,0 +1,27 @@
+<h1>Listado de secciones</h1>
+<br/>
+<table>
+  <tr>
+    <th>Titulo español</th>
+    <th>Titulo inglés</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sections.each do |section| %>
+  <tr>
+    <td><%= section.tituloes %></td>
+    <td><%= section.tituloen %></td>
+    <th></th>
+    <td><%= link_to 'Ver', section %></td>
+    <td><%= link_to 'Editar', edit_section_path(section) %></td>
+    <td><%= link_to 'Borrar', section, confirm: 'Estas seguro?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Añadir sección', new_section_path %>

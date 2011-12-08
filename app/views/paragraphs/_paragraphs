@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th>Titulo es/en</th>
+    <th>Texto es</th>
+    <th>Texto en</th>
+    <th>Imagen</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @paragraphs.each do |paragraph| %>
+  <tr>
+    <td><%= paragraph.tituloes%> / <%= paragraph.tituloen%></td>
+    <td><%= truncate(paragraph.textoes) %></td>
+    <td><%=truncate( paragraph.textoen) %></td>
+      <% if !paragraph.photo.nil?%>
+      <td>Sí</td> <%else%><td>No</td> <%end%>
+    <td><%= link_to 'Ver', paragraph %></td>
+    <td><%= link_to 'Editar', edit_paragraph_path(paragraph) %></td>
+    <td><%= link_to 'Borrar', paragraph, confirm: 'Estas seguro?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>

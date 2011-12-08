@@ -1,0 +1,28 @@
+
+<%@section.paragraphs.each do |paragraph|%>
+<div style='float:right ; margin:2em;'>
+  	<%if !paragraph.photo.nil?  &&      paragraph.photo.image_url.to_s!=''%>
+   	<%=link_to image_tag(paragraph.photo.image_url(:thumb).to_s,:size=>'140x128',:alt=>paragraph.tituloes), paragraph.photo.image_url.to_s,:rel=>'prettyPhoto',:title=>paragraph.photo.tituloes%>
+  	<%end%>
+	</div>
+<h3><%= paragraph.send(:titulo.to_s+local)%></h3>
+
+<p><%= simple_format(paragraph.send(:texto.to_s+local))%></p>
+<%end%>
+
+
+<div style='clear:both;'>
+<%@section.gallery.photos.each do |photo|%>
+<%=link_to image_tag(photo.image_url(:thumb).to_s,:size=>'72x72',:alt=>photo.tituloes), photo.image_url.to_s,:rel=>'prettyPhoto[pp_gal]',:title=>photo.tituloes%>
+<%end%>
+</div>
+<!--
+<div class="fleft">
+	<h2>YouTube</h2>
+		
+		<a href="http://www.youtube.com/watch?v=kh29_SERH0Y?rel=0" rel="prettyPhoto" title="YouTube demo">
+			<%=image_tag('enrails.jpg',:size=>'72x72')%></a>
+		<a href="http://youtu.be/kh29_SERH0Y?rel=0" rel="prettyPhoto" title="YouTube demo"><img src="thumbnails/flash-logo.png" width="60" alt="" /></a>
+				
+</div>
+-->			

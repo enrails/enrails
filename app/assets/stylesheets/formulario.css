@@ -1,0 +1,38 @@
+#contact-area {
+	width: 450px;
+	margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 350px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid #900;
+}
+
+#contact-area input.submit-button {
+	width: 80px;
+	float: right;
+}
+#contact-area input.submit-button:hover { background-color: #bfbfbf; }
+
+label {
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 70px;
+	padding-top: 5px;
+	font-size: 1.4em;
+}
+border-right:1px double #FF0033;
+}

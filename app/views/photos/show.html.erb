@@ -1,0 +1,26 @@
+<h1>Viendo imagen</h1>
+<div style='float:right ; margin-right:3em;'>
+  <%if @photo.image_url.to_s!=''%>
+   <%=link_to image_tag(@photo.image_url(:thumb).to_s,:size=>'128x128',:alt=>@photo.tituloes), @photo.image_url.to_s,:rel=>'prettyPhoto',:title=>@photo.tituloes%>
+  <%end%>
+</div>
+<p id="notice"><%= notice %></p>
+<b>Tituloes:</b>
+<p>
+ 
+  <%= @photo.tituloes %>
+</p>
+<h3>Tituloen:</h3>
+<p>  
+  <%= @photo.tituloen %>
+</p>
+<h3>Imagen:</h3>
+
+
+
+<%= link_to 'Editar', edit_photo_path(@photo) %> |
+<%if !@photo.gallery.nil?%>
+<%= link_to 'Volver', gallery_path(:id=>@photo.gallery) %>
+<%else%>
+<%= link_to 'Volver', @photo.paragraph %>
+<%end%>

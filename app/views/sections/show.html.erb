@@ -1,0 +1,13 @@
+ <h1>Sección: <%= @section.tituloes %> / <%= @section.tituloen %></h1>
+<p id="notice"><%= notice %></p>
+ <h3>Parrafos de la sección</h3>
+<%= render 'paragraphs/paragraphs'%>
+<%= link_to 'Añadir parrafo', new_paragraph_path(:id=>@section) %>
+   <h3>Galeria</h3>
+ <%= render 'galleries/photos'%>
+ <%= link_to 'Añadir imagen a la galeria',new_photo_path(:id=>@gallery)%>
+
+<br/><br/>
+
+<%= link_to 'Editar sección', edit_section_path(@section) %> |
+<%= link_to 'Volver a secciones', sections_path %>

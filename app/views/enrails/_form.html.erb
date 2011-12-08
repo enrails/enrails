@@ -1,0 +1,28 @@
+	
+	<%= form_tag enrails_contact_path, :method => :post do %>	
+		<fieldset>
+  		<div class="clearfix">
+			<label for="Name">Name:</label>
+				<div class='input'>
+					<%= text_field_tag :name %>
+				</div>
+		</div>
+		<div class="clearfix">
+			<label for="Email">Email:</label>
+				<div class='input'>
+					<%= text_field_tag :email %>
+				</div>
+		</div>	
+		<div class="clearfix">
+			<label for="Message">Message:</label>
+				<div class="input error">
+					
+					<%=text_area_tag :text%>
+				</div>
+		</div>
+		<div class="actions">
+		 <%= submit_tag :submit,:class=>'btn primary'%>
+		</div>
+	<%end%>
+	<div style="clear: both;"></div>
+

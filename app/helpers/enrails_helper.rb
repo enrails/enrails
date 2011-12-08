@@ -1,0 +1,2 @@
+module EnrailsHelper
+end

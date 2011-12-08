@@ -1,0 +1,11 @@
+<h1>Editando imagen</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Ver', @photo %> |
+
+<%if !@photo.gallery.nil?%>
+<%= link_to 'Volver', gallery_path(:id=>@photo.gallery) %>
+<%else%>
+<%= link_to 'Volver', @photo.paragraph %>
+<%end%>
