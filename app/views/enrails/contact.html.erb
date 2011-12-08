@@ -3,11 +3,16 @@
 
 </div>
 
-<p>Want to contact us? Fill the form and we will be in touch</p>
+<p>Si quieres preguntar algo puedes utilizar el siguiente formulario</p>
+
+ <div class="alert-message success">
+   <a class="close" href="#">×</a>
  <%if notice%>
-<p id="notice" style="color: green"><%= notice %></p>
-<%else%>
+<p><%= notice %></p>
+ <%else%>
 <p>&nbsp;</p>
 <%end%>
+</div>
+
 
 <%=render 'form'%>

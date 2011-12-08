@@ -57,4 +57,15 @@ Enrails::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+    config.action_mailer.smtp_settings ={
+
+	:address => "smtp.1and1.es",
+:port => 587,
+:authentication => :login,
+:user_name => 'info@onrails.es',
+:domain=>'onrails.es',
+:password => 'peyote82',
+:enable_starttls_auto=>true
+}
 end

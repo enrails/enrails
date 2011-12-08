@@ -27,4 +27,15 @@ Enrails::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  config.action_mailer.smtp_settings ={
+
+	:address => "smtp.1and1.es",
+:port => 587,
+:authentication => :login,
+:user_name => 'info@onrails.es',
+:domain=>'onrails.es',
+:password => 'peyote82',
+:enable_starttls_auto=>true
+}
 end

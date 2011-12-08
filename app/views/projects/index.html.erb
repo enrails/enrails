@@ -1,4 +1,4 @@
-<h1>Listing projects</h1>
+<h1>Listado de proyectos</h1>
 
 <table>
   <tr>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= project.tituloes %></td>
     <td><%= project.tituloen %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Ver', project %></td>
+    <td><%= link_to 'Editar', edit_project_path(project) %></td>
+    <td><%= link_to 'Eliminar', project, confirm: 'Estas seguro?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Project', new_project_path %>
+<%= link_to 'Nuevo proyecto', new_project_path %>

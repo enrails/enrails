@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :requirelogado
   # GET /projects
   # GET /projects.json
   def index

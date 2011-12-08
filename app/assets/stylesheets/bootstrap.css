@@ -181,8 +181,8 @@ textarea {
  * Basic and global styles for generating a grid system, structural layout, and page templates
  * ------------------------------------------------------------------------------------------- */
 body {
-  //background-color: #ffffff;
- // background:  url('leon.jpg');
+  background-color: #ffffff;
+ //background:  url('red.jpg');
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;

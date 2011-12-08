@@ -1,4 +1,14 @@
 module ApplicationHelper
+	
+	 def requirelogado
+	 	if logado!=true
+	  		redirect_to root_path
+	  	end
+	 end
+	 def logado
+   return  session[:logado]
+	end
+	
 	def local
 		I18n.locale.to_s
 	end

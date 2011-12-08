@@ -11,15 +11,17 @@
     </div>
   <% end %>
 <%=f.hidden_field :section_id%>
-  <div class="field">
-    <%= f.label :tituloes %><br />
+   <div class="clearfix">
+    <%= f.label :tituloes %>
+      <div class='input'>
     <%= f.text_field :tituloes %>
-  </div>
-  <div class="field">
-    <%= f.label :tituloen %><br />
+  </div></div>
+   <div class="clearfix">
+    <%= f.label :tituloen %>
+      <div class='input'>
     <%= f.text_field :tituloen %>
-  </div>
+  </div></div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit('Guardar', :class=>'btn primary')%>
   </div>
 <% end %>

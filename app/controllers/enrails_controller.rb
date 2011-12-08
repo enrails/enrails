@@ -31,9 +31,8 @@ class EnrailsController < ApplicationController
   	 
   	 @sections=Section.all
    	 if params[:name]
-   	 	puts '#################'
-   		puts 'envio de email'
-   		redirect_to enrails_contact_path, notice: 'mailsent' 
+   	 	ContactoMailer.contactar(params[:email],params[:name],params[:text]).deliver
+   		redirect_to enrails_contact_path, notice: 'Recibido' 
    	 end
   end
 end

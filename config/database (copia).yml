@@ -15,11 +15,7 @@ development:
   database: enrailsd
   pool: 5
   username: root
-<<<<<<< HEAD
-  password: jumianguel2011
-=======
-  password: jumianguel1011
->>>>>>> eef932a3b621d8a4ea022632ddd1bf9affcb94fa
+  password: root
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -32,11 +28,7 @@ test:
   database: enrailst
   pool: 5
   username: root
-<<<<<<< HEAD
-  password: jumianguel2011
-=======
-  password: jumianguel1011
->>>>>>> eef932a3b621d8a4ea022632ddd1bf9affcb94fa
+  password: root
   socket: /var/run/mysqld/mysqld.sock
 
 production:
@@ -46,9 +38,5 @@ production:
   database: enrailsp
   pool: 5
   username: root
-<<<<<<< HEAD
-  password: jumianguel2011
-=======
-  password: jumianguel1011
->>>>>>> eef932a3b621d8a4ea022632ddd1bf9affcb94fa
+  password: root
   socket: /var/run/mysqld/mysqld.sock
