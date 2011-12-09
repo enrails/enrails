@@ -7,8 +7,11 @@
     <meta name="author" content="">
    
     <%= javascript_include_tag "application" %>
-  
- 
+    <%= javascript_include_tag "jquery.prettyPhoto" %>
+    <%= javascript_include_tag "bootstrap-buttons" %>
+    <%= javascript_include_tag "bootstrap-alerts" %>
+ 	 <%= javascript_include_tag "bootstrap-tabs" %>
+ 	
 <script type="text/javascript" charset="utf-8">
 $(document).ready(function(){
   $("a[rel='prettyPhoto[pp_gal]']").prettyPhoto();
@@ -76,7 +79,8 @@ $(document).ready(function(){
     </style>
 
     <!-- Le fav and touch icons 
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <%= link_to image_tag('favicon.ico'),:rel=>"shortcut icon"%>
+    <link rel="shortcut icon" href="assets/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
