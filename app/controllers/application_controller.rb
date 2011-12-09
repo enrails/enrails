@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   layout 'bootstrap'
   protect_from_forgery
   before_filter :set_locale
-  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
+  #rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
  
   def requirelogado
 	 	if session[:logado]!=true
