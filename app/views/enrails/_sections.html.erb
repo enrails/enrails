@@ -15,6 +15,16 @@
     	</ul>
   	</li>
 <%end%>
-
 <li><%=link_to t('Contactar'),enrails_contact_path,:id=>"contactLink"%></li>
-<li><%=link_to t('Blog'),'http://enrails.blogspot.com'%></li>
+<!--<script>
+            $(function () {
+              $("a[rel=popover]")
+                .popover({
+                  offset: 10
+                })
+                .click(function(e) {
+                  e.preventDefault()
+                })
+            })
+          </script>-->
+<li><a href="http://blog.enrails.com"  id="blog" rel="popover" data-content="Se abre una página externa" data-original-title="Atención">Blog</a></li>
