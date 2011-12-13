@@ -4,15 +4,11 @@
 </div>
 
 <p>Si quieres preguntar algo puedes utilizar el siguiente formulario</p>
-
+<%if notice%>
  <div class="alert-message success">
    <a class="close" href="#">×</a>
- <%if notice%>
-<p><%= notice %></p>
- <%else%>
-<p>&nbsp;</p>
-<%end%>
+ 	<p><%= notice %></p>
 </div>
-
+<%end%>
 
 <%=render 'form'%>
