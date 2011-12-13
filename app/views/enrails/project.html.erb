@@ -16,7 +16,7 @@
 
 <div style=' clear:both;'>
 <br/>
-<h3>Capturas del proyecto</h3>
+
 <%@project.gallery.photos.each do |photo|%>
 <%=link_to image_tag(photo.image_url(:thumb).to_s,:size=>'72x72',:alt=>photo.tituloes), photo.image_url.to_s,:rel=>'prettyPhoto[pp_gal]',:title=>photo.tituloes%>
 <%end%>
