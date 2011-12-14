@@ -14,12 +14,35 @@
     <%= javascript_include_tag "bootstrap-alerts" %>
     <%= javascript_include_tag "bootstrap-tabs" %>
     <%= javascript_include_tag "bootstrap-dropdown" %>
+     <%= javascript_include_tag "jquery.validate" %>
 <script type="text/javascript" charset="utf-8">
 $(document).ready(function(){
   $("a[rel='prettyPhoto[pp_gal]']").prettyPhoto();
    $("a[rel='prettyPhoto']").prettyPhoto();
-   $(".alert-message").alert()
-   $('#blog').popover('show')
+   $(".alert-message").alert();
+   $('#blog').popover('show');
+	$("#form").validate({
+        rules: {
+            "email": {
+                required: true,
+                email: true
+            },
+            "text": {
+                required: true
+            }
+        },
+        errorElement: "span",
+        //wrapper: "div",  // a wrapper around the error message
+        errorPlacement: function(error, element) {
+            offset = element.offset();
+            error.insertBefore(element)
+            error.addClass('help-inline');  // add a class to the wrapper
+            error.css('position', 'absolute');
+            error.css('left', offset.left + element.outerWidth());
+            error.css('top', offset.top);
+        }
+
+    });
 });
 </script>
    

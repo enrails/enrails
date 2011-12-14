@@ -1,9 +1,6 @@
 Enrails::Application.routes.draw do
-<<<<<<< HEAD
- resource :defaultsite
-=======
+
   resources :defaultsite
->>>>>>> a2d61640ceb6065d851f51ac2dd814904ce039cd
   resources :sessions
   resources :projects
   get 'login' => 'sessions#new', :as => 'login'

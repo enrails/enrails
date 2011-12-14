@@ -1,17 +1,19 @@
 <%if !@projects.nil?%>
 <%@projects.each do |project|%>
-<div style='clear:both;'>
-	<div style='float:right ; margin:2em;'>
-  	<%if !project.paragraphs.first.photo.nil?  &&      project.paragraphs.first.photo.image_url.to_s!=''%>
-   	<%=link_to image_tag(project.paragraphs.first.photo.image_url(:thumb).to_s,:size=>'140x128',:alt=>project.paragraphs.first.photo.tituloes), project.paragraphs.first.photo.image_url.to_s,:rel=>'prettyPhoto',:title=>project.paragraphs.first.photo.tituloes%>
-  	<%end%>
-	</div>
+		<%if !project.paragraphs.first.nil? && !project.paragraphs.first.photo.nil?  &&      project.paragraphs.first.photo.image_url.to_s!=''%>
+	<div style='clear:both;'>
+		<div style='float:right ; margin:2em;'>
+  		
+  		 	<%=link_to image_tag(project.paragraphs.first.photo.image_url(:thumb).to_s,:size=>'140x128',:alt=>project.paragraphs.first.tituloes), project.paragraphs.first.photo.image_url.to_s,:rel=>'prettyPhoto',:title=>project.paragraphs.first.photo.tituloes%>
+		  
+		</div>
 	<h3><%= link_to project.send(:titulo.to_s+local),enrails_project_path(:id=>project)%></h3>
 	<br/>
 	
 <%=simple_format(project.paragraphs.first.textoes)%>
 <br/>
 </div>
+	<%end%>
 <%end%>
 <%end%>
 </br>

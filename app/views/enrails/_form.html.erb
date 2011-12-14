@@ -1,8 +1,9 @@
-	
-	<%= form_tag enrails_contact_path, :method => :post do %>	
-		<fieldset>
+
+	<%= form_tag enrails_contact_path,:id => 'form' , :method => :post do %>	
+	<fieldset>	
+		
   		<div class="clearfix">
-			<label for="Name">Name:</label>
+			<label for="Name">Nombre:</label>
 				<div class='input'>
 					<%= text_field_tag :name %>
 				</div>
@@ -12,17 +13,24 @@
 				<div class='input'>
 					<%= text_field_tag :email %>
 				</div>
+				
+		
 		</div>	
+		
 		<div class="clearfix">
-			<label for="Message">Message:</label>
-				<div class="input error">
+			<label for="Message">Mensaje:</label>
+				<div class="input">
 					
 					<%=text_area_tag :text%>
+					
 				</div>
+				
 		</div>
+		
 		<div class="actions">
-		 <%= submit_tag :submit,:class=>'btn primary'%>
+		 <%= submit_tag 'Enviar',:class=>'btn primary',:id=>'enviar'%>
 		</div>
 	<%end%>
+
 	<div style="clear: both;"></div>
 
