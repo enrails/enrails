@@ -1,18 +1,19 @@
 
 <h1><%=@project.tituloes%></h1>
-<div style='clear:both;'>
+
 <%@project.paragraphs.each do |paragraph|%>
-	<h2><%=paragraph.tituloes%></h2>
 	
+	<div style='clear:both;'>
 	<div style='float:right ; margin:2em;'>
-  	<%if paragraph.photo.image_url.to_s!=''%>
+  	<%if !paragraph.photo.nil? && paragraph.photo.image_url.to_s!=''%>
    	<%=link_to image_tag(paragraph.photo.image_url(:thumb).to_s,:size=>'140x128',:alt=>paragraph.photo.tituloes), paragraph.photo.image_url.to_s,:rel=>'prettyPhoto',:title=>paragraph.photo.tituloes%>
   	<%end%>
 	</div>
+	<h2><%=paragraph.tituloes%></h2>
 	<p><%=simple_format(paragraph.textoes)%></p>
-	
+</div>	
 <%end%>
-</div>
+
 
 <div style=' clear:both;'>
 <br/>
